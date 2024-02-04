@@ -23,6 +23,9 @@ const OUTPUT_SPRITE_DIR = "res://output_sprite/"
 ## タイルセット出力先ディレクトリ
 const OUTPUT_TILESET_DIR = "res://tileset/"
 
+## アニメーションのフレーム数
+const ANIMATION_DURATION:float = 1.0
+
 ##
 const TERRAIN_BITMASKS_TENKEY = [
 	[[1,2,3,4,5,6,7,8,9],[  2,3,4,5,6,7,8,9],[1,2,  4,5,6,7,8,9],[  2,  4,5,6,7,8,9],[1,2,3,4,5,6,7,8, ],[  2,3,4,5,6,7,8, ]],
@@ -235,9 +238,9 @@ func convert_a1() -> void:
 							tileset_src.set_tile_animation_columns(pos,1)
 							tileset_src.set_tile_animation_frames_count(pos,3)
 							tileset_src.set_tile_animation_separation(pos,Vector2i(0,0))
-							tileset_src.set_tile_animation_frame_duration(pos,0, 1.0)
-							tileset_src.set_tile_animation_frame_duration(pos,1, 1.0)
-							tileset_src.set_tile_animation_frame_duration(pos,2, 1.0)
+							tileset_src.set_tile_animation_frame_duration(pos,0, ANIMATION_DURATION)
+							tileset_src.set_tile_animation_frame_duration(pos,1, ANIMATION_DURATION)
+							tileset_src.set_tile_animation_frame_duration(pos,2, ANIMATION_DURATION)
 							
 							if (TERRAIN_BITMASKS__TENKEY_WATERFALL[y][x].has(1)\
 							or TERRAIN_BITMASKS__TENKEY_WATERFALL[y][x].has(2)\
@@ -325,9 +328,9 @@ func convert_a1() -> void:
 							tileset_src.set_tile_animation_separation(pos,Vector2i(5,0))
 							tileset_src.set_tile_animation_columns(pos,3)
 							tileset_src.set_tile_animation_frames_count(pos,3)
-							tileset_src.set_tile_animation_frame_duration(pos,0, 1.0)
-							tileset_src.set_tile_animation_frame_duration(pos,1, 1.0)
-							tileset_src.set_tile_animation_frame_duration(pos,2, 1.0)
+							tileset_src.set_tile_animation_frame_duration(pos,0, ANIMATION_DURATION)
+							tileset_src.set_tile_animation_frame_duration(pos,1, ANIMATION_DURATION)
+							tileset_src.set_tile_animation_frame_duration(pos,2, ANIMATION_DURATION)
 						
 						if (TERRAIN_BITMASKS_TENKEY_A4[y][x].has(1)\
 						or TERRAIN_BITMASKS_TENKEY_A4[y][x].has(2)\
